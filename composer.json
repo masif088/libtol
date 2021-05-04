@@ -21,5 +21,12 @@
             "ImajiDigitech\\Libtol\\": "packages/imaji-digitech/libtol/src",
             "ImajiDigitech\\Libtol\\Component\\": "packages/imaji-digitech/libtol/Component"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "imaji-digiech\\libtol\\LibtolServiceProvider"
+            ]
+        }
     }
 }
