@@ -33,11 +33,13 @@ class LibtolServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadRoutesFrom(__DIR__ . '/routes.php');
-        $this->publishes([
-            __DIR__.'/../resources/views' => resource_path('views'),
-            __DIR__.'/../public' => public_path('public'),
-            __DIR__.'/../app' => app_path('app')
-        ],'libtol');
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__ . '/../resources/views' => resource_path('views'),
+                __DIR__ . '/../public' => public_path('public'),
+                __DIR__ . '/../app' => app_path('app')
+            ], 'libtol');
+        }
 //        $this->loadViewComponentsAs('',[
 //            Date::class,
 //            Daterange::class,
