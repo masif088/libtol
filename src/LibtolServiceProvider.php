@@ -37,7 +37,7 @@ class LibtolServiceProvider extends ServiceProvider
             __DIR__.'/../resources/views' => resource_path('views'),
             __DIR__.'/../public' => public_path('public'),
             __DIR__.'/../app' => app_path('app')
-        ]);
+        ],'libtol');
 //        $this->loadViewComponentsAs('',[
 //            Date::class,
 //            Daterange::class,
